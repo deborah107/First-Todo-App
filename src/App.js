@@ -1,13 +1,16 @@
 import React from 'react';
 import Navbar from './components/navbar';
-import TodoList from './components/todolist'
-
+import TodoList from './components/todolist';
+import { Provider } from 'react-redux'
+import store from './store'
 
 function App() {
   return (
     <div>
-      <Navbar/>
-      <TodoList/>
+      <Provider store={store}>
+        <Navbar/>
+        <TodoList/>
+      </Provider>
     </div>
   );
 }
